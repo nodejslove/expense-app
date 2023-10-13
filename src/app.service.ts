@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { reports, ReportType } from 'src/data';
 import { v4 as uuid } from 'uuid';
+import { ReportResponseDto } from './dtos/report.dto';
 
 interface Report {
   amount: number;
@@ -13,18 +14,25 @@ interface UpdateReport {
 
 @Injectable()
 export class AppService {
-  getAllReports(type: ReportType) {
-    return reports.data.filter((report) => report.type == type);
+  getAllReports(type: ReportType): ReportResponseDto[] {
+    return reports.data
+      .filter((report) => report.type == type)
+      .map((report) => new ReportResponseDto(report));
   }
 
-  getReportById(type: ReportType, id: string) {
-    const result = reports.data.filter(
+  getReportById(type: ReportType, id: string): ReportResponseDto {
+    const result = reports.data.find(
       (report) => report.type == type && report.id == id,
     );
-    return result;
+    if (!result) return;
+
+    return new ReportResponseDto(result);
   }
 
-  createReport(type: ReportType, { amount, source }: Report) {
+  createReport(
+    type: ReportType,
+    { amount, source }: Report,
+  ): ReportResponseDto {
     const newReport = {
       id: uuid(),
       source,
@@ -35,22 +43,26 @@ export class AppService {
     };
 
     reports.data.push(newReport);
-    return { msg: 'report Created', data: newReport };
+    return new ReportResponseDto(newReport);
   }
 
-  updateReport(id: string, type: ReportType, body: UpdateReport) {
+  updateReport(
+    id: string,
+    type: ReportType,
+    body: UpdateReport,
+  ): ReportResponseDto {
     const reportIndex = reports.data.findIndex(
       (report) => report.id === id && report.type == type,
     );
     if (reportIndex === -1) {
-      return `Report with id: ${id} not found`;
+      return;
     }
     reports.data[reportIndex] = {
       ...reports.data[reportIndex],
       ...body,
       updated_at: new Date(),
     };
-    return reports.data[reportIndex];
+    return new ReportResponseDto(reports.data[reportIndex]);
   }
 
   deleteReport(id: string, type: ReportType) {
