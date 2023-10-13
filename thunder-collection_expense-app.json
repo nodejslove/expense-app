@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "expense-app",
+    "dateExported": "2023-10-13T06:28:59.032Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a6bd5f13-e222-4bb6-ad42-9784ba775cfd",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "get all reports",
+            "url": "localhost:3000/report/income",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-12T03:40:27.192Z",
+            "modified": "2023-10-13T05:44:24.185Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5155661a-fd7b-4329-865f-774e8c117b25",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "get single report",
+            "url": "localhost:3000/report/income/8215bcdb-9f25-4732-b53b-1dc927df499c",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-10-12T03:43:56.347Z",
+            "modified": "2023-10-13T06:19:05.260Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "02a4c5cb-5720-484b-9bc2-fba5701b0d53",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "create report",
+            "url": "localhost:3000/report/income",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-12T03:43:16.299Z",
+            "modified": "2023-10-13T06:26:04.431Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\": 5001,\n  \"source\": \"Food\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "87db6af0-3809-43bf-a99e-388f2215465b",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "update report",
+            "url": "localhost:3000/report/income/9ef76e9d-2217-498d-b049-fe25bda90cf5",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-10-12T03:43:21.795Z",
+            "modified": "2023-10-13T06:27:33.908Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\": 5001\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "192506ff-0965-43ed-93c5-a370cb0d4b73",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "delete report",
+            "url": "localhost:3000/report/income/ca1936a3-97b2-45e6-a85e-9faa728af731",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-10-12T03:43:37.923Z",
+            "modified": "2023-10-13T06:26:27.850Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
