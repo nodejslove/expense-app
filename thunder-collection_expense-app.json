@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "expense-app",
-    "dateExported": "2023-10-13T06:28:59.032Z",
+    "dateExported": "2023-10-14T09:12:25.952Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -24,11 +24,11 @@
             "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
             "containerId": "",
             "name": "get single report",
-            "url": "localhost:3000/report/income/8215bcdb-9f25-4732-b53b-1dc927df499c",
+            "url": "localhost:3000/report/income/8edb234f-cb4e-40da-9137-d7594817da2d",
             "method": "GET",
             "sortNum": 15000,
             "created": "2023-10-12T03:43:56.347Z",
-            "modified": "2023-10-13T06:19:05.260Z",
+            "modified": "2023-10-13T20:56:59.282Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -42,12 +42,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-10-12T03:43:16.299Z",
-            "modified": "2023-10-13T06:26:04.431Z",
+            "modified": "2023-10-13T20:56:27.020Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"amount\": 5001,\n  \"source\": \"Food\"\n}",
+                "raw": "{\n  \"amount\": 5001,\n  \"source\": 0\n}",
                 "form": []
             },
             "tests": []
@@ -57,16 +57,16 @@
             "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
             "containerId": "",
             "name": "update report",
-            "url": "localhost:3000/report/income/9ef76e9d-2217-498d-b049-fe25bda90cf5",
+            "url": "localhost:3000/report/income/8edb234f-cb4e-40da-9137-d7594817da2d",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-10-12T03:43:21.795Z",
-            "modified": "2023-10-13T06:27:33.908Z",
+            "modified": "2023-10-13T20:57:14.409Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"amount\": 5001\n}",
+                "raw": "{\n  \"amount\": 50010\n}",
                 "form": []
             },
             "tests": []
@@ -76,11 +76,25 @@
             "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
             "containerId": "",
             "name": "delete report",
-            "url": "localhost:3000/report/income/ca1936a3-97b2-45e6-a85e-9faa728af731",
+            "url": "localhost:3000/report/income/0524b8a5-2fa1-44dd-a802-4626c250fc97",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2023-10-12T03:43:37.923Z",
-            "modified": "2023-10-13T06:26:27.850Z",
+            "modified": "2023-10-13T20:56:44.660Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "379eb506-e477-42e5-8711-5d241644b946",
+            "colId": "1b5a8106-d650-4c6e-b57f-d3c442e9621b",
+            "containerId": "",
+            "name": "get summary",
+            "url": "localhost:3000/summary",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-10-13T21:49:48.960Z",
+            "modified": "2023-10-13T21:49:57.565Z",
             "headers": [],
             "params": [],
             "tests": []

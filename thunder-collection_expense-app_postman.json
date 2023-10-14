@@ -1,0 +1,131 @@
+{
+    "info": {
+        "name": "expense-app",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "get all reports",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:3000/report/income",
+                    "path": [
+                        "report",
+                        "income"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "get single report",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:3000/report/income/8edb234f-cb4e-40da-9137-d7594817da2d",
+                    "path": [
+                        "report",
+                        "income",
+                        "8edb234f-cb4e-40da-9137-d7594817da2d"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "create report",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:3000/report/income",
+                    "path": [
+                        "report",
+                        "income"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\": 5001,\n  \"source\": 0\n}"
+                }
+            }
+        },
+        {
+            "name": "update report",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost:3000/report/income/8edb234f-cb4e-40da-9137-d7594817da2d",
+                    "path": [
+                        "report",
+                        "income",
+                        "8edb234f-cb4e-40da-9137-d7594817da2d"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\": 50010\n}"
+                }
+            }
+        },
+        {
+            "name": "delete report",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "localhost:3000/report/income/0524b8a5-2fa1-44dd-a802-4626c250fc97",
+                    "path": [
+                        "report",
+                        "income",
+                        "0524b8a5-2fa1-44dd-a802-4626c250fc97"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "get summary",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:3000/summary",
+                    "path": [
+                        "summary"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
